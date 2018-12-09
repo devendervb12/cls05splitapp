@@ -1,0 +1,13 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="emax.cls05Product.view.SAPP" xmlns:html="http://www.w3.org/1999/xhtml">
+	<SplitApp id="idSplitApp">
+		<!-- <masterPages>
+		    <Page title="Product List">
+		    </Page>
+		</masterPages>
+		<detailPages>
+		     <Page title="Product De tails">
+		    </Page>
+		</detailPages> -->
+	</SplitApp>
+</core:View>

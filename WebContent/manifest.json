@@ -1,0 +1,51 @@
+{
+  "sap.app" : {
+     "id" : "emax.cls05Product",
+     "dataSources" : {
+         "emaxProduct" : {
+            "uri" : "proxy/http/cloud.mydomain.com:8700/sap/opu/odata/SAP/ZGW_CLS05_PRODUCT_SRV/"
+            
+         }
+     }
+  },
+  "sap.ui5" : {
+  	"rootView" : "emax.cls05Product.view.SAPP",
+  	"models" : {
+  	   "" : {
+  	     "dataSource" : "emaxProduct"
+  	   }
+  	},
+		"routing" : {
+			"config" : {
+				"routerClass" : "sap.m.routing.Router",
+				 "viewType" : "XML",
+				 "controlId" : "idSplitApp",
+			    "viewPath" : "emax.cls05Product.view" 
+			},
+			"routes" : [
+				{					
+				  "pattern" : "",
+				  "name" : "home",
+				  "target" : ["mPage", "dPage"]				 
+			    },
+			    {
+			    "pattern" : "toDetails/{pid}",
+				  "name" : "p2",
+				  "target" : ["mPage", "dPage"]
+			    }
+				],
+			"targets" : {
+			    "mPage" : {
+			        "viewName" : "ProductList",
+			        "controlAggregation" : "masterPages"
+			    },
+			    "dPage" : {
+			       "viewName" : "ProductDetails",
+			       "controlAggregation" : "detailPages"
+			    }
+			}	
+			
+		}
+  }
+
+}
